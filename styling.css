@@ -16,36 +16,6 @@ body {
 	margin: 0;
 }
 
-.nav-bar {
-	overflow: hidden;
-	background-color: var(--NAV-COLOR);
-	text-decoration: none;
-	text-align: center;
-	color: var(--DEFAULT-TEXT-COLOR);
-}
-
-.nav-bar ul {
-	display: flex;
-	flex-direction: row;
-	list-style: none;
-}
-
-.nav-bar li {
-	margin: 25px;
-}
-
-.nav-bar li:first-child {
-	margin-right: auto;
-}
-
-.nav-bar a {
-	font-size: 30px;
-	text-decoration: none;
-	font-family: var(--HEADER-FONT);
-	font-weight: 600;
-	color: var(--FOOTER-COLOR);
-}
-
 .home-paragraphs,
 .contact-us {
 	padding: 1rem;
@@ -61,6 +31,7 @@ body {
 }
 
 .contact-us {
+	padding-bottom: 5rem;
 	background-color: var(--FOOTER-COLOR);
 }
 
@@ -122,6 +93,39 @@ dd {
 
 /* Following css manages the images for small viewports by creating a horizontal carousel instead of an animated grid */
 @media only screen and (max-width: 1100px) {
+	.nav-bar {
+		z-index: 2;
+		position: fixed;
+		bottom: 0;
+		width: 100vw;
+		height: 6rem;
+		background-color: var(--NAV-COLOR);
+		text-decoration: none;
+		text-align: center;
+		color: var(--DEFAULT-TEXT-COLOR);
+	}
+
+	.nav-bar ul {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: row;
+		list-style: none;
+	}
+
+	.nav-bar li {
+		margin: 1rem auto 1rem auto;
+		padding: auto;
+	}
+
+	.nav-bar a {
+		font-size: 22px;
+		text-decoration: none;
+		font-family: var(--HEADER-FONT);
+		font-weight: 500;
+		color: var(--FOOTER-COLOR);
+	}
+
 	.mobile-carousel-container {
 		padding: 2rem;
 	}
@@ -187,6 +191,36 @@ dd {
 /* https://github.com/fireship-io/224-animated-css-grid */
 
 @media only screen and (min-width: 1100px) {
+	.nav-bar {
+		overflow: hidden;
+		background-color: var(--NAV-COLOR);
+		text-decoration: none;
+		text-align: center;
+		color: var(--DEFAULT-TEXT-COLOR);
+	}
+
+	.nav-bar ul {
+		display: flex;
+		flex-direction: row;
+		list-style: none;
+	}
+
+	.nav-bar li {
+		margin: 25px;
+	}
+
+	.nav-bar li:first-child {
+		margin-right: auto;
+	}
+
+	.nav-bar a {
+		font-size: 30px;
+		text-decoration: none;
+		font-family: var(--HEADER-FONT);
+		font-weight: 500;
+		color: var(--FOOTER-COLOR);
+	}
+
 	.animated-grid {
 		height: 85vh;
 		margin-bottom: 3rem;
